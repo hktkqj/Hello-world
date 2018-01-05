@@ -34,4 +34,4 @@ def get_changes(goods,pay) :
 #End Of Function
 
 if __name__ == '__main__':
-    get_changes("item02",6)
+    get_changes("item01",6)
