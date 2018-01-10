@@ -13,8 +13,10 @@ def to_morse_code(Ori_String) :
 		'9':'####@',' ':'-'
 	}
 	Char_List=list(Ori_String)
+	result=""
 	for char in Char_List :
-		print(dict[char],end='')
+		result=result+dict[char]
+	return result
 
 if __name__ == '__main__' :
-    to_morse_code("i am morse 258")
+    print(to_morse_code("i am morse 258"))

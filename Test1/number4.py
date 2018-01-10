@@ -9,7 +9,7 @@ def fibonacci_recursion(Time) :
 		else :
 			return fibonacci_recursion(Time-1)+fibonacci_recursion(Time-2);
 	else :
-		print("参数异常")
+		return "参数异常"
 
 def fibonacci_loop(Time) :
 	Std_Set = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',}
@@ -22,7 +22,7 @@ def fibonacci_loop(Time) :
 				Seq.append(Seq[-1]+Seq[-2])
 		return Seq[-1]
 	else :
-		print("参数异常")
+		return "参数异常"
 
 if __name__ == '__main__':
 	print('Recursion result : ',fibonacci_recursion(11))

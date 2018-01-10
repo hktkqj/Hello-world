@@ -1,0 +1,8 @@
+import re
+
+pattern =re.compile(r'he[asf][gda]o')
+
+match=pattern.match('hello world 1221421 helloaasdasf helso heloo hello heslashelloda')
+
+if match :
+    print(match.group())

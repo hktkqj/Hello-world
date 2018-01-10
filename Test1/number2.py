@@ -18,20 +18,22 @@ def get_changes(goods,pay) :
 	Changes={50:0,20:0,10:0,5:0,1:0,0.5:0,0.1:0}
 	if goods in Item_Price.keys() :
 		if pay < Item_Price[goods] :
-			print("支付金额不足,请重新支付...")
+			return "支付金额不足,请重新支付..."
 		else :
+			result=""
 			Temp_Remain=pay-Item_Price[goods]
 			for num in Changes.keys() :
 				while Temp_Remain>=num :
 					Temp_Remain=Temp_Remain-num
 					Changes[num]=Changes[num]+1
 				if num==0.1 :
-					print(str(num) + '*' + str(Changes[num]))
+					result=result+str(num) + '*' + str(Changes[num])
 				else :
-					print(str(num) + '*' + str(Changes[num]),end=',')
+					result=result+str(num) + '*' + str(Changes[num])+','
+			return result
 	else :
-		print("无此商品,请重新选择...")
+		return "无此商品,请重新选择..."
 #End Of Function
 
 if __name__ == '__main__':
-    get_changes("item01",6)
+    print(get_changes("item01",1))
